@@ -162,3 +162,59 @@ a:hover {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+/* --- 3. DESKTOP/TABLET Styles (Applies when viewport is 768px or wider) --- */
+@media (min-width: 768px) {
+    
+    .layout-wrapper {
+        /* Set up the wrapper as a Flex container */
+        display: flex;
+        gap: 20px; /* Space between the two columns */
+        max-width: 1200px; /* Cap the max width for very large screens */
+        width: 90%; /* Use slightly more width on desktop */
+    }
+
+    .sidebar {
+        /* Take up 25% of the available space */
+        flex: 1; 
+        min-width: 200px; /* Ensure sidebar is not too narrow */
+        margin-bottom: 0; /* Remove the vertical margin used for stacking */
+    }
+
+    .main-content {
+        /* Take up 75% of the available space */
+        flex: 3; 
+        margin-bottom: 0;
+    }
+}
+/* --- 1. Base Setup (Applies to ALL devices) --- */
+* {
+    box-sizing: border-box; /* Makes padding/border not increase element size */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.layout-wrapper {
+    width: 95%; /* Use 95% of screen width */
+    margin: 20px auto; /* Center the wrapper */
+}
+
+/* --- 2. MOBILE Styles (Default - applies below 768px) --- */
+
+.sidebar, .main-content {
+    /* Each section takes 100% of the wrapper width by default */
+    padding: 20px;
+    margin-bottom: 20px; /* Space between the stacked sections */
+    border: 1px solid #ccc;
+}
+
+.sidebar {
+    background-color: #f1f1f1;
+}
+
+.main-content {
+    background-color: #ffffff;
+}
