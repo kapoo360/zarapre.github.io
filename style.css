@@ -190,3 +190,73 @@ img, video {
         width: 33.33%;
     }
 }
+
+/* ... all of your existing CSS (Header, Main Nav, Hero, Gallery, Footer) ... */
+
+
+/* --- RESPONSIVENESS (MOBILE STYLES) --- */
+
+@media (max-width: 768px) {
+    
+    /* 1. Header: Stack vertically */
+    .header {
+        flex-direction: column; 
+        padding: 15px 20px;
+        text-align: center;
+    }
+    
+    .logo-img {
+        height: 30px; 
+        margin-bottom: 10px;
+    }
+
+    /* 2. Main Navigation: Stack menu items vertically */
+    .main-nav {
+        margin: 10px 0;
+    }
+
+    .main-nav ul {
+        flex-direction: column; 
+        gap: 10px; 
+        padding: 0;
+    }
+
+    /* 3. User Actions: Keep them side-by-side but slightly closer */
+    .user-actions {
+        gap: 15px;
+        margin-top: 5px;
+    }
+    
+    /* 4. Product Gallery: Stack columns vertically */
+    .product-gallery {
+        flex-direction: column;
+        gap: 40px; 
+    }
+
+    /* Set the gallery items to full width when stacked */
+    .gallery-item, 
+    .gallery-item-2 {
+        width: 100%; 
+        height: auto; 
+        min-height: 300px; 
+        padding: 20px; 
+    }
+    
+    /* Center the heading in the first gallery item */
+    .gallery-item h2 {
+        font-size: 1.5em; 
+    }
+    
+    /* Center text in the first gallery item */
+    .gallery-item {
+        text-align: center; 
+        align-items: center; 
+    }
+    
+    /* Adjust hero image height for mobile */
+    .hero-image {
+        height: 50vh; 
+    }
+}
+
+
