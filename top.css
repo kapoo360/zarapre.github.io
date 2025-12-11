@@ -329,3 +329,88 @@ section.card {
   color: #000000;
   line-height: 1.4;
 }
+
+
+
+
+/* --- RESPONSIVENESS (MOBILE AND TABLET STYLES) --- */
+
+@media (max-width: 1024px) {
+    /* Adjust content padding for slightly smaller screens */
+    .content {
+        padding: 0 15px;
+    }
+    
+    /* Slightly reduce gap for main navigation */
+    .main-nav ul {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    /* 1. Header: Stack Vertically on Mobile/Tablet */
+    .header {
+        flex-direction: column; /* Stack logo, nav, and user-actions */
+        padding: 15px 20px;
+        text-align: center;
+    }
+    
+    .logo-img {
+        height: 30px; /* Smaller logo */
+        margin-bottom: 10px;
+    }
+
+    /* 2. Main Navigation: Stack Menu Items Vertically */
+    .main-nav {
+        margin: 10px 0;
+    }
+
+    .main-nav ul {
+        flex-direction: column; /* Stack navigation links */
+        gap: 10px; /* Closer spacing for links */
+        padding: 0;
+    }
+
+    /* 3. User Actions: Keep them side-by-side but slightly closer */
+    .user-actions {
+        gap: 15px;
+        margin-top: 5px;
+    }
+    
+    /* 4. Hero Section Adjustments */
+    .hero-image {
+        height: 50vh; /* Make the hero image shorter on mobile */
+        margin-bottom: 20px;
+    }
+    
+    .hero-image h1 {
+        font-size: 2.5em; /* Smaller font for the main title */
+        letter-spacing: 5px;
+    }
+    
+    /* 5. Product Grid (Refinement) */
+    .product-grid {
+        /* Confirms 2 columns on tablets/mobile, which was already set */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    /* 6. Product Card/Info Adjustment */
+    .description, .price {
+        font-size: 9px; /* Slightly smaller text for better fit */
+    }
+    
+    /* 7. Product Listing (The section containing the grid) */
+    .product-listing {
+        padding: 20px 0;
+    }
+
+}
+
+@media (max-width: 480px) {
+    /* 8. Extra small screens (small phones): Change grid to 1 column */
+    .product-grid {
+        grid-template-columns: 1fr; /* Full-width, single column */
+    }
+}
