@@ -162,34 +162,9 @@ a:hover {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-img, video {
-    max-width: 100%; /* Ensures the image never exceeds its parent's width */
-    height: auto;    /* Maintains the image's aspect ratio */
-}
-/* Default styles (for smaller screens/mobile first) */
-.container {
-    width: 100%;
-    padding: 10px;
-}
-.column {
-    float: none; /* Stacks elements vertically */
-    width: 100%;
-}
 
-/* Styles applied ONLY when the screen is 600px wide or wider (e.g., tablet) */
-@media (min-width: 600px) {
-    .container {
-        width: 90%; /* A little narrower on tablets */
-    }
-}
 
-/* Styles applied ONLY when the screen is 1024px wide or wider (e.g., desktop) */
-@media (min-width: 1024px) {
-    .column {
-        float: left; /* Puts elements side-by-side */
-        width: 33.33%;
-    }
-}
+
 
 /* ... all of your existing CSS (Header, Main Nav, Hero, Gallery, Footer) ... */
 
@@ -258,5 +233,4 @@ img, video {
         height: 50vh; 
     }
 }
-
 
